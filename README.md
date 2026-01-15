@@ -22,8 +22,6 @@
 
 ## 安装（Linux / Windows）
 
-> 🐳 **推荐**：如需使用 Docker 快速部署，请查看 [Docker 部署指南](DOCKER_README.md)。
-
 ### 1）克隆仓库
 
 ```bash
@@ -47,12 +45,12 @@ python -m venv venv
 .\venv\Scripts\Activate.ps1
 ```
 
-### 3）安装 PyTorch（示例，CUDA 12.6 对应版本）
+### 3）安装 PyTorch（示例，CUDA 12.8 对应版本）
 
 根据你的 CUDA / 显卡环境调整版本。以下为参考示例：
 
 ```bash
-pip install --no-cache-dir torch==2.7.0 torchvision==0.22.0 torchaudio==2.7.0 --index-url https://download.pytorch.org/whl/cu126
+pip install --no-cache-dir torch==2.7.0 torchvision==0.22.0 torchaudio==2.7.0 --index-url https://download.pytorch.org/whl/cu128
 ```
 
 ### 4）安装项目依赖
