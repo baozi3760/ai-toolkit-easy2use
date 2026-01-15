@@ -541,8 +541,6 @@ class SDTrainer(BaseSDTrainProcess):
             elif self.train_config.min_snr_gamma is not None and self.train_config.min_snr_gamma > 0.000001 and not ignore_snr:
                 loss = apply_snr_weight(loss, timesteps, self.sd.noise_scheduler, self.train_config.min_snr_gamma)
         loss = loss.mean()
-<<<<<<< HEAD
-=======
         
         # check for audio loss
         if batch.audio_pred is not None and batch.audio_target is not None:
@@ -550,7 +548,6 @@ class SDTrainer(BaseSDTrainProcess):
             loss = loss + audio_loss
 
         # check for additional losses
->>>>>>> upstream/main
         if self.adapter is not None and hasattr(self.adapter, "additional_loss") and self.adapter.additional_loss is not None:
             loss = loss + self.adapter.additional_loss.mean()
             self.adapter.additional_loss = None
