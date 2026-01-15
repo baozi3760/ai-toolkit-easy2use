@@ -124,13 +124,13 @@ export default function JobActionBar({
         </MenuButton>
         <MenuItems anchor="bottom" className="bg-gray-900 border border-gray-700 rounded shadow-lg w-48 px-2 py-2 mt-4">
           <MenuItem>
-            <Link href={`/jobs/new?cloneId=${job.id}`} className="cursor-pointer px-4 py-1 hover:bg-gray-800 rounded block">
+            <Link href={`/jobs/new?cloneId=${job.id}`} className="cursor-pointer px-4 py-1 hover:bg-gray-800 rounded block text-gray-200">
               克隆任务
             </Link>
           </MenuItem>
           <MenuItem>
             <div
-              className="cursor-pointer px-4 py-1 hover:bg-gray-800 rounded"
+              className="cursor-pointer px-4 py-1 hover:bg-gray-800 rounded text-gray-200"
               onClick={() => {
                 let message = `确定要强制标记此任务为已停止吗？如果状态卡住，这将把状态设为'stopped'。请仅在确认任务确实已停止时执行此操作。这**不会**停止正在运行的任务。`;
                 openConfirm({
