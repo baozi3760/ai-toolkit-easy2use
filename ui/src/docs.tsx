@@ -226,31 +226,30 @@ const docs: { [key: string]: ConfigDoc } = {
     ),
   },
   'datasets.do_audio': {
-    title: 'Do Audio',
+    title: '启用音频',
     description: (
       <>
-        For models that support audio with video, this option will load the audio from the video and resize it to match
-        the video sequence. Since the video is automatically resized, the audio may drop or raise in pitch to match the new
-        speed of the video. It is important to prep your dataset to have the proper length before training.
+        对于支持音频与视频的模型，此选项将从视频中加载音频并调整其大小以匹配视频序列。
+        由于视频会被自动缩放，音频的音高可能会降低或升高以匹配视频的新速度。
+        在训练之前准备好具有适当长度的数据集非常重要。
       </>
     ),
   },
   'datasets.audio_normalize': {
-    title: 'Audio Normalize',
+    title: '音频标准化',
     description: (
       <>
-        When loading audio, this will normalize the audio volume to the max peaks. Useful if your dataset has varying audio
-        volumes. Warning, do not use if you have clips with full silence you want to keep, as it will raise the volume of those clips.
+        加载音频时，此选项将音频音量标准化到最大峰值。如果你的数据集音频音量不一致，这很有用。
+        警告：如果你有想要保留的完全静音片段，请勿使用此选项，因为它会提高这些片段的音量。
       </>
     ),
   },
   'datasets.audio_preserve_pitch': {
-    title: 'Audio Preserve Pitch',
+    title: '保持音高',
     description: (
       <>
-        When loading audio to match the number of frames requested, this option will preserve the pitch of the audio if
-        the length does not match training target. It is recommended to have a dataset that matches your target length,
-        as this option can add sound distortions. 
+        当加载音频以匹配请求的帧数时，如果长度与训练目标不匹配，此选项将保留音频的音高。
+        建议使用与目标长度匹配的数据集，因为此选项可能会增加声音失真。
       </>
     ),
   },

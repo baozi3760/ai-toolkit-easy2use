@@ -922,7 +922,7 @@ export default function SimpleJob({
                         )}
                         {modelArch?.additionalSections?.includes('datasets.do_audio') && (
                           <Checkbox
-                            label="Do Audio"
+                            label="启用音频"
                             checked={dataset.do_audio || false}
                             onChange={value => {
                               if (!value) {
@@ -936,7 +936,7 @@ export default function SimpleJob({
                         )}
                         {modelArch?.additionalSections?.includes('datasets.audio_normalize') && (
                           <Checkbox
-                            label="Audio Normalize"
+                            label="音频标准化"
                             checked={dataset.audio_normalize || false}
                             onChange={value => {
                               if (!value) {
@@ -950,7 +950,7 @@ export default function SimpleJob({
                         )}
                         {modelArch?.additionalSections?.includes('datasets.audio_preserve_pitch') && (
                           <Checkbox
-                            label="Audio Preserve Pitch"
+                            label="保持音高"
                             checked={dataset.audio_preserve_pitch || false}
                             onChange={value => {
                               if (!value) {
@@ -1379,8 +1379,8 @@ export default function SimpleJob({
           </Card>
         </div>
 
-        {status === 'success' && <p className="text-green-500 text-center">Training saved successfully!</p>}
-        {status === 'error' && <p className="text-red-500 text-center">Error saving training. Please try again.</p>}
+        {status === 'success' && <p className="text-green-500 text-center">训练任务已成功保存！</p>}
+        {status === 'error' && <p className="text-red-500 text-center">保存训练任务失败，请重试。</p>}
       </form>
       <AddSingleImageModal />
     </>
