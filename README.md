@@ -117,6 +117,8 @@ npm run build_and_start
   - 建议优先确认 Python、CUDA 与驱动版本匹配；也可以考虑使用 WSL（Windows Subsystem for Linux）以获得更稳定的依赖环境。
 - UI 无法访问或接口报错？
   - 请检查 Node.js 版本（≥18）、依赖是否安装完成（`npm install`）、以及开发服务器是否正常运行（`npm run dev`）。
+- 构建时提示 `Module not found: Can't resolve 'recharts'`？
+  - 这是新版本引入的图表库，请在 `ui` 目录下运行 `npm install recharts` 进行安装。
 
 ## 致谢与说明
 
