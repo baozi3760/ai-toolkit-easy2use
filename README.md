@@ -22,8 +22,6 @@
 
 ## 安装（Linux / Windows）
 
-> 🐳 **推荐**：如需使用 Docker 快速部署，请查看 [Docker 部署指南](DOCKER_README.md)。
-
 ### 1）克隆仓库
 
 ```bash
@@ -47,12 +45,12 @@ python -m venv venv
 .\venv\Scripts\Activate.ps1
 ```
 
-### 3）安装 PyTorch（示例，CUDA 12.6 对应版本）
+### 3）安装 PyTorch（示例，CUDA 12.8 对应版本）
 
 根据你的 CUDA / 显卡环境调整版本。以下为参考示例：
 
 ```bash
-pip install --no-cache-dir torch==2.7.0 torchvision==0.22.0 torchaudio==2.7.0 --index-url https://download.pytorch.org/whl/cu126
+pip install --no-cache-dir torch==2.7.0 torchvision==0.22.0 torchaudio==2.7.0 --index-url https://download.pytorch.org/whl/cu128
 ```
 
 ### 4）安装项目依赖
@@ -119,6 +117,8 @@ npm run build_and_start
   - 建议优先确认 Python、CUDA 与驱动版本匹配；也可以考虑使用 WSL（Windows Subsystem for Linux）以获得更稳定的依赖环境。
 - UI 无法访问或接口报错？
   - 请检查 Node.js 版本（≥18）、依赖是否安装完成（`npm install`）、以及开发服务器是否正常运行（`npm run dev`）。
+- 构建时提示 `Module not found: Can't resolve 'recharts'`？
+  - 这是新版本引入的图表库，请在 `ui` 目录下运行 `npm install recharts` 进行安装。
 
 ## 致谢与说明
 

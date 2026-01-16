@@ -228,7 +228,6 @@ class QwenImageEditPlusModel(QwenImageModel):
 
             if batch_control_tensor_list is not None:
                 b = 0
-                # 遍历每个 batch 项的控制图张量列表，避免忽略控制图
                 for control_tensor_list in batch_control_tensor_list:
                     # control tensor list is a list of tensors for this batch item
                     controls = []

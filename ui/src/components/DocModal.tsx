@@ -48,7 +48,7 @@ export default function DocModal() {
                 onClick={onClose}
                 className="mt-3 inline-flex w-full justify-center rounded-md bg-gray-800 px-3 py-2 text-sm font-semibold text-gray-200 hover:bg-gray-800 sm:mt-0 sm:w-auto ring-0"
               >
-                Close
+                关闭
               </button>
             </div>
           </DialogPanel>
